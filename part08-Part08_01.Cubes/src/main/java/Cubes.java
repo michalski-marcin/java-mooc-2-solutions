@@ -8,7 +8,7 @@ public class Cubes {
 
         while (true) {
             String input = scanner.nextLine();
-            s
+
             if (input.equals("end")) {
                 break;
             }
