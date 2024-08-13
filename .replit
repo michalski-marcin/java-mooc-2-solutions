@@ -1,5 +1,5 @@
 modules = ["java-graalvm22.3"]
-run = "start"
+run = "javac -classpath .: Main.java"
 
 [nix]
 channel = "stable-24_05"
