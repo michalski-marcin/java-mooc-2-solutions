@@ -24,10 +24,10 @@ public class StorageFacility {
     }
 
     else {
-      content.add("");
+      return content;
     }
-    
+
     return content;
   }
-  
+
 }

@@ -11,7 +11,7 @@ public class DictionaryOfManyTranslations {
   }
 
   public void add(String word, String translation) {
-    
+
     this.translations.putIfAbsent(word, new ArrayList<>());
 
     this.translations.get(word).add(translation);
@@ -25,17 +25,15 @@ public class DictionaryOfManyTranslations {
     }
 
     else {
-      keyTranslations.add("");
+      return keyTranslations;
     }
 
     return keyTranslations;
-    
+
   }
 
   public void remove(String word) {
     translations.remove(word);
   }
 
-  
-  
 }
