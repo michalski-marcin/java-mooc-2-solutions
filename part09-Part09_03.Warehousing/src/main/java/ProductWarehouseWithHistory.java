@@ -1,34 +1,30 @@
-import java.util.ArrayList;
 
 public class ProductWarehouseWithHistory extends ProductWarehouse {
 
-  private double initialBalance;
   private ChangeHistory history;
 
   public ProductWarehouseWithHistory(String productName, double capacity, double initialBalance) {
 
     super(productName, capacity);
-    this.initialBalance = initialBalance;
+
     this.history = new ChangeHistory();
     addToWarehouse(initialBalance);
-    
+
   }
 
-  
-    public void addToWarehouse(double amount) {
+  public void addToWarehouse(double amount) {
 
-      super.addToWarehouse(amount);
-      history.add(getBalance());
-      
-    }
+    super.addToWarehouse(amount);
+    history.add(getBalance());
 
-  
+  }
+
   public double takeFromWarehouse(double amount) {
 
     double num = super.takeFromWarehouse(amount);
     history.add(getBalance());
     return num;
-    
+
   }
 
   public void printAnalysis() {
@@ -40,8 +36,7 @@ public class ProductWarehouseWithHistory extends ProductWarehouse {
   }
 
   public String history() {
-   return this.history.toString(); 
+    return this.history.toString();
   }
 
-  
 }
