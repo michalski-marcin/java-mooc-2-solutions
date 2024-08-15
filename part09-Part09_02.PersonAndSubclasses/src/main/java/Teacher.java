@@ -9,6 +9,6 @@ public class Teacher extends Person {
 
   @Override
   public String toString() {
-    return super.toString() + "\n " + salary + " euro/month";
+    return super.toString() + "\n  salary " + salary + " euro/month";
   }
 }
