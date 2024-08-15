@@ -16,6 +16,22 @@ public class StorageFacility {
     this.storage.get(unit).add(item);
   }
 
+  public void remove(String unit, String item) {
+    if (this.storage.containsKey(unit)) {
+      this.storage.get(unit).remove(item);
+    }
+
+    if (this.storage.get(unit).isEmpty()) {
+      this.storage.remove(unit);
+    }
+
+  }
+
+  public ArrayList<String> storageUnits() {
+    ArrayList<String> storageUnits = new ArrayList<>(storage.keySet());
+    return storageUnits;
+  }
+
   public ArrayList<String> contents(String storageUnit) {
     ArrayList<String> content = new ArrayList<>();
 
