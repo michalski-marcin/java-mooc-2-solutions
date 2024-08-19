@@ -7,12 +7,14 @@ public class CustomTacoBox implements TacoBox {
   }
 
   @Override
-    public int tacosRemaining() {
-      return tacos;
-    }
+  public int tacosRemaining() {
+    return tacos;
+  }
 
-    @Override
-    public void eat() {
+  @Override
+  public void eat() {
+    if (tacos > 0) {
       tacos--;
     }
+  }
 }
