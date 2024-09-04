@@ -22,23 +22,20 @@ public class AverageOfSelectedNumbers {
 
         if (usersChoice.equals("p")) {
             Double average = inputs.stream()
-                .mapToInt(s -> Integer.valueOf(s))
-                .filter(value -> value > 0)
-                .average()
-                .getAsDouble();
+                    .mapToInt(s -> Integer.valueOf(s))
+                    .filter(value -> value > 0)
+                    .average()
+                    .getAsDouble();
             System.out.println("Average of the negative numbers: " + average);
         } else if (usersChoice.equals("n")) {
             Double average = inputs.stream()
-                .mapToInt(s -> Integer.valueOf(s))
-                .filter(value -> value < 0)
-                .average()
-                .getAsDouble();
+                    .mapToInt(s -> Integer.valueOf(s))
+                    .filter(value -> value < 0)
+                    .average()
+                    .getAsDouble();
             System.out.println("Average of the negative numbers: " + average);
         }
 
-        
-        
-        } 
-
     }
+
 }
