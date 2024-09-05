@@ -12,7 +12,7 @@ public class LiteracyComparison {
         try {
             Files.lines(Paths.get("literacy.csv"))
                     .map(row -> row.split(","))
-                    .map(row -> new Literacy(row[3], row[4], row[2].replace("%", "").trim(),
+                    .map(row -> new Literacy(row[3], row[4], row[2].replace("(%)", "").trim(),
                             Double.valueOf(row[5])))
                     .forEach(results::add);
         } catch (Exception e) {
